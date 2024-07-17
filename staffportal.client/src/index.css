@@ -1,0 +1,6 @@
+/* styles/global.css */
+@import 'flowbite';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
