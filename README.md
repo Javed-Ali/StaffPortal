@@ -22,7 +22,7 @@ Update the database connection string in **appsettings.json** under **StaffPorta
     "DefaultConnection": "SET YOUR CONNECTION STRING HERE"
 }
 ```
-Update localhost url in program.cs to avoid CORS error.
+Update localhost url in program.cs under StaffPortal.Server project to avoid CORS error
 ```c#
 builder.Services.AddCors(options =>
 {
