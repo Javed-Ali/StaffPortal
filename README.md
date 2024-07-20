@@ -22,6 +22,19 @@ Update the database connection string in **appsettings.json** under **StaffPorta
     "DefaultConnection": "SET YOUR CONNECTION STRING HERE"
 }
 ```
+Update localhost url in program.cs to avoid CORS error.
+```c#
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp",
+                      policy =>
+                      {
+                          policy.WithOrigins("YOUR_URL_HERE")
+                                .AllowAnyHeader()
+                                .AllowAnyMethod(); ;
+                      });
+});
+```
 
 ### Database Migrations
 Run the following commands in Package Manager Console (PMC) to apply migrations and seed the database. Migrations folder has the schema and seed data and will populate the DB for you
